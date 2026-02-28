@@ -379,28 +379,36 @@ document.addEventListener('keydown', (e) => {
     });
 
     // drinks
-    document.getElementById('drinksLabel').textContent = data.drinks?.label || '';
-    document.getElementById('drinksTitle').innerHTML = `Nuestra <span>Barra</span>`;
-    document.getElementById('drinksBadge').textContent = data.tax_note || '';
-    const dg = document.getElementById('drinksGrid');
-    dg.innerHTML = '';
-    (data.drinks?.columns || []).forEach(col => {
-      const div = document.createElement('div');
-      div.className = 'drinks-col';
-      div.innerHTML = `<p class="drinks-col-title">${esc(col.title)}</p>`;
-      (col.items || []).forEach(it => {
-        const row = document.createElement('div');
-        row.className = 'drink-item';
-        row.innerHTML = `<span class="drink-name">${esc(it.name)}</span><span class="drink-price">${esc(it.price)}</span>`;
-        div.appendChild(row);
-      });
-      if(it.image){
-    row.style.cursor = 'pointer';
-    row.addEventListener('click', () => openImg(it.image));
-  }
-      dg.appendChild(div);
-    });
+document.getElementById('drinksLabel').textContent = data.drinks?.label || '';
+document.getElementById('drinksTitle').innerHTML = `Nuestra <span>Barra</span>`;
+document.getElementById('drinksBadge').textContent = data.tax_note || '';
+const dg = document.getElementById('drinksGrid');
+dg.innerHTML = '';
 
+(data.drinks?.columns || []).forEach(col => {
+  const div = document.createElement('div');
+  div.className = 'drinks-col';
+  div.innerHTML = `<p class="drinks-col-title">${esc(col.title)}</p>`;
+
+  (col.items || []).forEach(it => {
+    const row = document.createElement('div');
+    row.className = 'drink-item';
+    row.innerHTML = `
+      <span class="drink-name">${esc(it.name)}</span>
+      <span class="drink-price">${esc(it.price)}</span>
+    `;
+
+    // ✅ imagen opcional
+    if (it.image) {
+      row.style.cursor = 'pointer';
+      row.addEventListener('click', () => openImg(it.image));
+    }
+
+    div.appendChild(row);
+  });
+
+  dg.appendChild(div);
+});
     // footer
     document.getElementById('footName').textContent = data.restaurant || '';
     document.getElementById('footCopy').textContent = data.footer?.copyright || '';
