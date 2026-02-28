@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es">
 <head>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Demo Restaurante – Sitio + Menú Editable</title>
@@ -85,5 +86,14 @@
       Demo lista. En Netlify: activa <b>Identity</b> + <b>Git Gateway</b> para que /admin funcione con login.
     </div>
   </div>
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", () => {
+      if (window.location.hash && window.location.hash.includes("recovery_token")) {
+        window.netlifyIdentity.open("recover");
+      }
+    });
+  }
+</script>
 </body>
 </html>

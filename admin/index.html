@@ -7,10 +7,14 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <script>
+<script>
   if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
+    window.netlifyIdentity.on("init", (user) => {
+      // ✅ Si vienes de un link de reset / invite, abre el modal automáticamente
+      if (window.location.hash && window.location.hash.includes("recovery_token")) {
+        window.netlifyIdentity.open("recover");
+      }
+
       if (!user) {
         window.netlifyIdentity.on("login", () => {
           document.location.href = "/admin/";
