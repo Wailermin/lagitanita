@@ -1,57 +1,4 @@
 {
-  "restaurant": "La Gitana",
-  "tagline": "Sabor que enamora · RD",
-  "updated_at": "2026-02-28",
-  "tax_note": "Impuestos incluidos",
-  "hero": {
-    "subtitle": "Food & Drinks",
-    "tabs": [
-      {
-        "label": "Desayuno",
-        "href": "#desayuno"
-      },
-      {
-        "label": "Entradas",
-        "href": "#entradas"
-      },
-      {
-        "label": "Platos Fuertes",
-        "href": "#platos"
-      },
-      {
-        "label": "Bebidas",
-        "href": "#bebidas"
-      }
-    ]
-  },
-  "breakfast": {
-    "label": "Para empezar el día",
-    "title": "Menú Desayuno Económico",
-    "badge": "Todos incluyen 1 Jugo Natural · Impuestos incluidos",
-    "items": [
-      {
-        "name": "Mangú de Plátano Maduro con Huevo Hervido",
-        "includes": "+ 1 Jugo Natural",
-        "price": 285
-      },
-      {
-        "name": "Frito con Salami",
-        "includes": "+ 1 Jugo Natural",
-        "price": 250,
-        "image" : "/assets/uploads/prueba.jpg"
-      },
-      {
-        "name": "Tostada de Jamón y Queso",
-        "includes": "+ 1 Jugo Natural",
-        "price": 200
-      },
-      {
-        "name": "3 Golpes",
-        "includes": "+ 1 Jugo Natural",
-        "price": 325
-      }
-    ]
-  },
   "appetizers": {
     "label": "Para compartir",
     "title": "Entradas",
@@ -127,6 +74,9 @@
       }
     ]
   },
+  "tax_note": "Impuestos incluidos",
+  "tagline": "Sabor que enamora · RD",
+  "updated_at": "2026-02-28",
   "mains": {
     "label": "Lo mejor de la casa",
     "title": "Platos Fuertes",
@@ -146,6 +96,58 @@
         "name": "Salmón Noruego 8 Onz",
         "sides": null,
         "price": 895
+      }
+    ]
+  },
+  "hero": {
+    "subtitle": "Food & Drinks",
+    "tabs": [
+      {
+        "label": "Desayuno",
+        "href": "#desayuno"
+      },
+      {
+        "label": "Entradas",
+        "href": "#entradas"
+      },
+      {
+        "label": "Platos Fuertes",
+        "href": "#platos"
+      },
+      {
+        "label": "Bebidas",
+        "href": "#bebidas"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 · Todos los derechos reservados"
+  },
+  "breakfast": {
+    "label": "Para empezar el día",
+    "title": "Menú Desayuno Económico",
+    "badge": "Todos incluyen 1 Jugo Natural · Impuestos incluidos",
+    "items": [
+      {
+        "name": "Mangú de Plátano Maduro con Huevo Hervido",
+        "includes": "+ 1 Jugo Natural",
+        "price": 285
+      },
+      {
+        "name": "Frito con Salami",
+        "includes": "+ 1 Jugo Natural",
+        "price": 250,
+        "image": "/assets/uploads/prueba.jpg"
+      },
+      {
+        "name": "Tostada de Jamón y Queso",
+        "includes": "+ 1 Jugo Natural",
+        "price": 200
+      },
+      {
+        "name": "3 Golpes",
+        "includes": "+ 1 Jugo Natural",
+        "price": 325
       }
     ]
   },
@@ -232,7 +234,8 @@
           },
           {
             "name": "Nueva York",
-            "price": "RD$495"
+            "price": "RD$495",
+            "image": "/assets/uploads/nuestros-exquisito-trago-nueva-york-🗽🩵solo-en-la-gitana-food-and-drinks-🩵.webp"
           },
           {
             "name": "La Toxica",
@@ -296,7 +299,5 @@
       }
     ]
   },
-  "footer": {
-    "copyright": "© 2026 · Todos los derechos reservados"
-  }
+  "restaurant": "La Gitana"
 }
