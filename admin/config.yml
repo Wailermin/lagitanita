@@ -1,0 +1,103 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "menu"
+    label: "Menú"
+    files:
+      - name: "menu"
+        label: "Editar Menú"
+        file: "menu/menu.json"
+        format: "json"
+        fields:
+          - { label: "Nombre del restaurante", name: "restaurant", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string", required: false }
+          - { label: "Fecha actualización", name: "updated_at", widget: "string", required: false }
+          - { label: "Nota impuestos", name: "tax_note", widget: "string", required: false }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Subtítulo", name: "subtitle", widget: "string", required: false }
+              - label: "Tabs"
+                name: "tabs"
+                widget: "list"
+                fields:
+                  - { label: "Texto", name: "label", widget: "string" }
+                  - { label: "Ancla", name: "href", widget: "string" }
+          - label: "Desayuno"
+            name: "breakfast"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "label", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Badge", name: "badge", widget: "string", required: false }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Nombre", name: "name", widget: "string" }
+                  - { label: "Incluye", name: "includes", widget: "string", required: false }
+                  - { label: "Precio", name: "price", widget: "number" }
+                  - { label: "Imagen", name: "image", widget: "image", required: false }
+          - label: "Entradas"
+            name: "appetizers"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "label", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - label: "Categorías"
+                name: "categories"
+                widget: "list"
+                fields:
+                  - { label: "Título de categoría (puede incluir emoji)", name: "label", widget: "string" }
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    fields:
+                      - { label: "Nombre", name: "name", widget: "string" }
+                      - { label: "Subtexto", name: "sub", widget: "string", required: false }
+                      - { label: "Precio", name: "price", widget: "number" }
+                      - { label: "Imagen", name: "image", widget: "image", required: false }
+          - label: "Platos fuertes"
+            name: "mains"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "label", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Guarnición por defecto", name: "sides_default", widget: "string", required: false }
+              - label: "Tarjetas"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - { label: "Nombre", name: "name", widget: "string" }
+                  - { label: "Guarnición (opcional)", name: "sides", widget: "string", required: false }
+                  - { label: "Precio", name: "price", widget: "number" }
+                  - { label: "Imagen", name: "image", widget: "image", required: false }
+          - label: "Bebidas"
+            name: "drinks"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "label", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - label: "Columnas"
+                name: "columns"
+                widget: "list"
+                fields:
+                  - { label: "Título de columna", name: "title", widget: "string" }
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    fields:
+                      - { label: "Nombre", name: "name", widget: "string" }
+                      - { label: "Precio (texto)", name: "price", widget: "string" }
+                      - { label: "Imagen", name: "image", widget: "image", required: false }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Copyright", name: "copyright", widget: "string" }

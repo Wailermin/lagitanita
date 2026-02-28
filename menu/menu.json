@@ -1,0 +1,302 @@
+{
+  "restaurant": "La Gitana",
+  "tagline": "Sabor que enamora · RD",
+  "updated_at": "2026-02-28",
+  "tax_note": "Impuestos incluidos",
+  "hero": {
+    "subtitle": "Food & Drinks",
+    "tabs": [
+      {
+        "label": "Desayuno",
+        "href": "#desayuno"
+      },
+      {
+        "label": "Entradas",
+        "href": "#entradas"
+      },
+      {
+        "label": "Platos Fuertes",
+        "href": "#platos"
+      },
+      {
+        "label": "Bebidas",
+        "href": "#bebidas"
+      }
+    ]
+  },
+  "breakfast": {
+    "label": "Para empezar el día",
+    "title": "Menú Desayuno Económico",
+    "badge": "Todos incluyen 1 Jugo Natural · Impuestos incluidos",
+    "items": [
+      {
+        "name": "Mangú de Plátano Maduro con Huevo Hervido",
+        "includes": "+ 1 Jugo Natural",
+        "price": 285
+      },
+      {
+        "name": "Frito con Salami",
+        "includes": "+ 1 Jugo Natural",
+        "price": 250,
+        "image" : "/assets/uploads/prueba.jpg"
+      },
+      {
+        "name": "Tostada de Jamón y Queso",
+        "includes": "+ 1 Jugo Natural",
+        "price": 200
+      },
+      {
+        "name": "3 Golpes",
+        "includes": "+ 1 Jugo Natural",
+        "price": 325
+      }
+    ]
+  },
+  "appetizers": {
+    "label": "Para compartir",
+    "title": "Entradas",
+    "categories": [
+      {
+        "label": "🫓 Catibias",
+        "items": [
+          {
+            "name": "Pollo",
+            "price": 95
+          },
+          {
+            "name": "Pollo Queso",
+            "price": 100
+          },
+          {
+            "name": "Res",
+            "price": 90
+          }
+        ]
+      },
+      {
+        "label": "🥗 La Capresa",
+        "items": [
+          {
+            "name": "La Capresa",
+            "price": 485
+          }
+        ]
+      },
+      {
+        "label": "🌮 Tacos (3 Uds)",
+        "items": [
+          {
+            "name": "Pollo",
+            "price": 350
+          },
+          {
+            "name": "Pollo y Queso & Maíz",
+            "price": 375
+          },
+          {
+            "name": "Ropa Vieja",
+            "price": 300
+          },
+          {
+            "name": "Camarones",
+            "price": 450
+          }
+        ]
+      },
+      {
+        "label": "🧆 Croquetas",
+        "items": [
+          {
+            "name": "Pollo",
+            "price": 400
+          },
+          {
+            "name": "Res",
+            "price": 350
+          }
+        ]
+      },
+      {
+        "label": "🍌 Canasticas Platanera",
+        "items": [
+          {
+            "name": "Pollo · Res · Camarones",
+            "price": 495
+          }
+        ]
+      }
+    ]
+  },
+  "mains": {
+    "label": "Lo mejor de la casa",
+    "title": "Platos Fuertes",
+    "sides_default": "Acompañado de: Tostones · Puré de Yuca · Puré de Papa",
+    "cards": [
+      {
+        "name": "Churrasco Prime",
+        "sides": null,
+        "price": 995
+      },
+      {
+        "name": "Pechuga a la Plancha",
+        "sides": null,
+        "price": 650
+      },
+      {
+        "name": "Salmón Noruego 8 Onz",
+        "sides": null,
+        "price": 895
+      }
+    ]
+  },
+  "drinks": {
+    "label": "Para tomar",
+    "title": "Nuestra Barra",
+    "columns": [
+      {
+        "title": "🍊 Naturales",
+        "items": [
+          {
+            "name": "China",
+            "price": "RD$250"
+          },
+          {
+            "name": "Chinola",
+            "price": "RD$125"
+          },
+          {
+            "name": "Tamarindo",
+            "price": "RD$125"
+          },
+          {
+            "name": "Piña",
+            "price": "RD$125"
+          },
+          {
+            "name": "Pera Piña",
+            "price": "RD$125"
+          }
+        ]
+      },
+      {
+        "title": "🍸 Cócteles",
+        "items": [
+          {
+            "name": "Fly Mojitos (4)",
+            "price": "RD$950"
+          },
+          {
+            "name": "Mojitos",
+            "price": "RD$250"
+          },
+          {
+            "name": "Margaritas",
+            "price": "RD$250"
+          },
+          {
+            "name": "Margaritas Pallets",
+            "price": "RD$350"
+          },
+          {
+            "name": "Corona Margaritas",
+            "price": "RD$375"
+          },
+          {
+            "name": "Caipirinha",
+            "price": "RD$250"
+          },
+          {
+            "name": "Gin Tonic",
+            "price": "RD$250"
+          },
+          {
+            "name": "Sangrías",
+            "price": "RD$250"
+          },
+          {
+            "name": "Piña Colada",
+            "price": "RD$250"
+          }
+        ]
+      },
+      {
+        "title": "✨ Cócteles Exóticos",
+        "items": [
+          {
+            "name": "El Mañanero",
+            "price": "RD$495"
+          },
+          {
+            "name": "El Joseador",
+            "price": "RD$495"
+          },
+          {
+            "name": "Nueva York",
+            "price": "RD$495"
+          },
+          {
+            "name": "La Toxica",
+            "price": "RD$495"
+          },
+          {
+            "name": "Singapur",
+            "price": "RD$495"
+          },
+          {
+            "name": "Frida Kahlo",
+            "price": "RD$495"
+          }
+        ]
+      },
+      {
+        "title": "🥃 Shots",
+        "items": [
+          {
+            "name": "Fireball",
+            "price": "RD$195"
+          },
+          {
+            "name": "Tequila",
+            "price": "RD$200"
+          },
+          {
+            "name": "Vodka",
+            "price": "RD$185"
+          },
+          {
+            "name": "Fly Shots (6)",
+            "price": "RD$1,100"
+          }
+        ]
+      },
+      {
+        "title": "🍺 Cervezas",
+        "items": [
+          {
+            "name": "Coronas",
+            "price": "RD$250"
+          },
+          {
+            "name": "Presidente Peq. Light",
+            "price": "RD$200"
+          },
+          {
+            "name": "Modelo",
+            "price": "RD$200"
+          },
+          {
+            "name": "Smirnoff",
+            "price": "RD$200"
+          },
+          {
+            "name": "One",
+            "price": "RD$150"
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 · Todos los derechos reservados"
+  }
+}

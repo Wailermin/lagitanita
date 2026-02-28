@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo Restaurante – Sitio + Menú Editable</title>
+  <style>
+    :root{--bg:#0b0b0c;--card:#141418;--line:#242430;--txt:#fff;--muted:rgba(255,255,255,.7);--teal:#2abfbf;--wine:#6b1a2e}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#070708, #0b0b0c 40%, #080809);color:var(--txt)}
+    .wrap{max-width:1080px;margin:0 auto;padding:28px}
+    .hero{padding:52px 0 24px;display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}}
+    .pill{display:inline-flex;gap:10px;align-items:center;border:1px solid rgba(42,191,191,.35);color:var(--teal);padding:8px 14px;border-radius:999px;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+    h1{margin:16px 0 10px;font-size:44px;line-height:1.05}
+    .lead{color:var(--muted);font-size:16px;line-height:1.6}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 16px;border-radius:14px;text-decoration:none;font-weight:650}
+    .btn.primary{background:var(--teal);color:#071012}
+    .btn.ghost{border:1px solid rgba(255,255,255,.18);color:var(--txt);background:rgba(255,255,255,.04)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+    .k{color:var(--teal);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+    .t{margin:8px 0 6px;font-size:18px;font-weight:750}
+    .p{margin:0;color:rgba(255,255,255,.75);line-height:1.55}
+    .mini{margin-top:6px;color:rgba(255,255,255,.6);font-size:13px}
+    .preview{background:linear-gradient(135deg, rgba(107,26,46,.35), rgba(42,191,191,.25));border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:18px}
+    .preview .box{background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px}
+    .list{margin:10px 0 0;padding-left:18px;color:rgba(255,255,255,.75);line-height:1.6}
+    .footer{padding:26px 0 10px;color:rgba(255,255,255,.5);font-size:13px;border-top:1px solid rgba(255,255,255,.08);margin-top:28px}
+    .badge{display:inline-flex;gap:10px;align-items:center;margin-top:10px;color:rgba(255,255,255,.7);font-size:13px}
+    code{background:rgba(255,255,255,.06);padding:2px 7px;border-radius:10px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <div class="pill">Sitio listo para vender · Menú editable</div>
+        <h1>Web premium para restaurante<br><span style="color:var(--teal)">+ Panel simple</span> para actualizar el menú</h1>
+        <p class="lead">
+          Esta demo incluye un menú visual (como el que ya tienes) y una página alterna <code>/admin</code>
+          donde el dueño puede editar productos y precios con un formulario, sin tocar código.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="/menu/">Ver el menú (demo)</a>
+          <a class="btn ghost" href="/admin/">Entrar al panel</a>
+        </div>
+        <div class="badge">✅ Ideal para “te lo instalo y te lo dejo listo” · ✅ Seguro con usuario y contraseña</div>
+      </div>
+
+      <div class="preview">
+        <div class="box">
+          <div class="k">Qué incluye</div>
+          <ul class="list">
+            <li>Menú público, rápido y mobile-first</li>
+            <li>Panel <b>/admin</b> (Decap CMS) para editar el menú</li>
+            <li>Publicación con 1 clic (queda guardado en GitHub)</li>
+            <li>Hosting gratuito en Netlify (opcional dominio propio)</li>
+          </ul>
+          <div class="mini">Tip: para venderlo, di que es “un menú digital autoadministrable”.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="k">Admin fácil</div>
+        <div class="t">Editar como si fuera Word</div>
+        <p class="p">El cliente entra, cambia precio/nombre, agrega o quita items y publica.</p>
+      </div>
+      <div class="card">
+        <div class="k">Sin apps</div>
+        <div class="t">Funciona en cualquier celular</div>
+        <p class="p">Es una web (PWA friendly). Se puede guardar en pantalla de inicio.</p>
+      </div>
+      <div class="card">
+        <div class="k">Escalable</div>
+        <div class="t">Se le agregan fotos y combos</div>
+        <p class="p">Puedes ampliar categorías, añadir imágenes y promos en minutos.</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      Demo lista. En Netlify: activa <b>Identity</b> + <b>Git Gateway</b> para que /admin funcione con login.
+    </div>
+  </div>
+</body>
+</html>
