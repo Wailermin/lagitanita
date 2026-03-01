@@ -418,12 +418,19 @@ dg.innerHTML = '';
 </script>
 
 <script>
-  const key = new URLSearchParams(window.location.search).get("demo");
+  const params = new URLSearchParams(window.location.search);
+  let key = params.get("demo");
 
-  // 🔐 Claves activas (cambia por cada cliente)
-  const allowedKeys = ["demo123"];
+  // 🔐 clave activa actual
+  const activeKey = "demo733";
 
-  if (!allowedKeys.includes(key)) {
+  // 🔁 Si no hay demo key, la agrega automáticamente
+  if (!key) {
+    window.location.href = "/menu/?demo=" + activeKey;
+  }
+
+  // 🚫 Si la key no es válida, bloquear
+  if (key && key !== activeKey) {
     document.body.innerHTML = `
       <div style="
         display:flex;
@@ -435,9 +442,10 @@ dg.innerHTML = '';
         padding:20px;
       ">
         <div>
-          <h1>Acceso restringido</h1>
-          <p>Este demo ha expirado o no es válido.</p>
+          <h1>Demo expirado</h1>
+          <p>Este acceso ya no está disponible.</p>
           <p>Contáctanos para activarlo.</p>
+          <p>829-871-0416.</p>
         </div>
       </div>
     `;
