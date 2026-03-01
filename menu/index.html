@@ -416,5 +416,32 @@ dg.innerHTML = '';
 
   load().catch(err => console.error(err));
 </script>
+
+<script>
+  const key = new URLSearchParams(window.location.search).get("demo");
+
+  // 🔐 Claves activas (cambia por cada cliente)
+  const allowedKeys = ["demo123"];
+
+  if (!allowedKeys.includes(key)) {
+    document.body.innerHTML = `
+      <div style="
+        display:flex;
+        height:100vh;
+        align-items:center;
+        justify-content:center;
+        font-family:sans-serif;
+        text-align:center;
+        padding:20px;
+      ">
+        <div>
+          <h1>Acceso restringido</h1>
+          <p>Este demo ha expirado o no es válido.</p>
+          <p>Contáctanos para activarlo.</p>
+        </div>
+      </div>
+    `;
+  }
+</script>
 </body>
 </html>
