@@ -32,8 +32,7 @@ collections:
             name: "appetizers"
             widget: "object"
             fields:
-              - { label: "Etiqueta", name: "label", widget: "string" }
-              - { label: "Título", name: "title", widget: "string" }
+
               - label: "Categorías"
                 name: "categories"
                 widget: "list"
@@ -51,8 +50,7 @@ collections:
             name: "mains"
             widget: "object"
             fields:
-              - { label: "Etiqueta", name: "label", widget: "string" }
-              - { label: "Título", name: "title", widget: "string" }
+
               - { label: "Guarnición por defecto", name: "sides_default", widget: "string", required: false }
               - label: "Tarjetas"
                 name: "cards"
@@ -66,8 +64,7 @@ collections:
             name: "drinks"
             widget: "object"
             fields:
-              - { label: "Etiqueta", name: "label", widget: "string" }
-              - { label: "Título", name: "title", widget: "string" }
+
               - label: "Columnas"
                 name: "columns"
                 widget: "list"
@@ -80,8 +77,4 @@ collections:
                       - { label: "Nombre", name: "name", widget: "string" }
                       - { label: "Precio (texto)", name: "price", widget: "string" }
                       - { label: "Imagen", name: "image", widget: "image", required: false }
-          - label: "Footer"
-            name: "footer"
-            widget: "object"
-            fields:
-              - { label: "Copyright", name: "copyright", widget: "string" }
+          
