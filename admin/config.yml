@@ -12,23 +12,9 @@ collections:
       - name: "menu"
         label: "Editar Menú"
         file: "menu/menu.json"
+        slug: "menu"
         format: "json"
         fields:
-          - { label: "Nombre del restaurante", name: "restaurant", widget: "string" }
-          - { label: "Tagline", name: "tagline", widget: "string", required: false }
-          - { label: "Fecha actualización", name: "updated_at", widget: "string", required: false }
-          - { label: "Nota impuestos", name: "tax_note", widget: "string", required: false }
-          - label: "Hero"
-            name: "hero"
-            widget: "object"
-            fields:
-              - { label: "Subtítulo", name: "subtitle", widget: "string", required: false }
-              - label: "Tabs"
-                name: "tabs"
-                widget: "list"
-                fields:
-                  - { label: "Texto", name: "label", widget: "string" }
-                  - { label: "Ancla", name: "href", widget: "string" }
           - label: "Desayuno"
             name: "breakfast"
             widget: "object"
