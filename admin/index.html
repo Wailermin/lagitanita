@@ -1,32 +1,29 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Admin - Menú</title>
+<style>
+  /* 1) Ocultar cualquier panel lateral derecho (preview) */
+  aside,
+  [role="complementary"],
+  [class*="Preview"],
+  [class*="preview"],
+  [data-testid*="preview"]{
+    display: none !important;
+  }
 
-  <!-- 🔥 ESTO VA AQUÍ -->
-  <style>
-    /* Oculta panel de preview */
-    .PreviewPane,
-    [data-testid="preview-pane"]{
-      display: none !important;
-    }
+  /* 2) Forzar que el área principal use todo el ancho */
+  main,
+  [role="main"],
+  [data-testid*="editor"],
+  [class*="Editor"],
+  [class*="editor"]{
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 1 1 auto !important;
+  }
 
-    /* Haz que el editor use todo el ancho */
-    .EditorContainer,
-    [data-testid="editor-container"]{
-      width: 100% !important;
-      max-width: 100% !important;
-    }
-  </style>
-
-  <!-- Identity -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-
-<body>
-  <!-- Decap CMS -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-</body>
-</html>
+  /* 3) Si el layout es flex con 2 columnas, evita que reserve espacio */
+  body > div,
+  #nc-root,
+  .CMS_App,
+  [class*="App"]{
+    max-width: 100% !important;
+  }
+</style>
