@@ -19,9 +19,7 @@ collections:
             name: "breakfast"
             widget: "object"
             fields:
-              - { label: "Etiqueta", name: "label", widget: "string" }
-              - { label: "Título", name: "title", widget: "string" }
-              - { label: "Badge", name: "badge", widget: "string", required: false }
+
               - label: "Items"
                 name: "items"
                 widget: "list"
