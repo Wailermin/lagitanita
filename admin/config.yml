@@ -18,6 +18,7 @@ collections:
           - label: "Desayuno"
             name: "breakfast"
             widget: "object"
+            collapsed: true
             fields:
 
               - label: "Items"
@@ -31,6 +32,7 @@ collections:
           - label: "Entradas"
             name: "appetizers"
             widget: "object"
+            collapsed: true
             fields:
 
               - label: "Categorías"
@@ -49,6 +51,7 @@ collections:
           - label: "Platos fuertes"
             name: "mains"
             widget: "object"
+            collapsed: true
             fields:
 
               - { label: "Guarnición por defecto", name: "sides_default", widget: "string", required: false }
@@ -63,6 +66,7 @@ collections:
           - label: "Bebidas"
             name: "drinks"
             widget: "object"
+            collapsed: true
             fields:
 
               - label: "Columnas"
