@@ -107,6 +107,120 @@ input, textarea {
 #nc-root{
   margin-top:70px;
 }
+/* ================================
+   DECAP CMS — DARK THEME (WAILER)
+   ================================ */
+
+#nc-root{
+  --w-bg:#0b0b0c;
+  --w-panel:#141418;
+  --w-panel2:#101014;
+  --w-line:#242430;
+  --w-text:#ffffff;
+  --w-muted:rgba(255,255,255,.72);
+  --w-accent:#2abfbf;
+}
+
+/* Fondo de toda el área interna del CMS */
+#nc-root,
+#nc-root > div{
+  background: var(--w-bg) !important;
+  color: var(--w-text) !important;
+}
+
+/* Sidebar + área central (colecciones / listas / editor) */
+#nc-root [class*="Sidebar"],
+#nc-root [class*="sidebar"],
+#nc-root [class*="Collection"],
+#nc-root [class*="collection"],
+#nc-root [class*="Page"],
+#nc-root [class*="page"],
+#nc-root [class*="Content"],
+#nc-root [class*="content"]{
+  background: transparent !important;
+  color: var(--w-text) !important;
+}
+
+/* Tarjetas / paneles */
+#nc-root [class*="Card"],
+#nc-root [class*="card"],
+#nc-root [class*="Pane"],
+#nc-root [class*="pane"],
+#nc-root [class*="List"],
+#nc-root [class*="list"],
+#nc-root [class*="Control"],
+#nc-root [class*="control"],
+#nc-root [class*="Widget"],
+#nc-root [class*="widget"]{
+  background: var(--w-panel) !important;
+  border: 1px solid var(--w-line) !important;
+  border-radius: 16px !important;
+  color: var(--w-text) !important;
+}
+
+/* “Bloques” internos del editor (secciones tipo Desayuno/Entradas/etc.) */
+#nc-root details,
+#nc-root summary,
+#nc-root fieldset{
+  background: var(--w-panel) !important;
+  border: 1px solid var(--w-line) !important;
+  border-radius: 16px !important;
+  color: var(--w-text) !important;
+}
+
+/* Textos secundarios */
+#nc-root p,
+#nc-root small,
+#nc-root label,
+#nc-root [class*="hint"],
+#nc-root [class*="Help"],
+#nc-root [class*="help"]{
+  color: var(--w-muted) !important;
+}
+
+/* Inputs */
+#nc-root input,
+#nc-root textarea,
+#nc-root select{
+  background: var(--w-panel2) !important;
+  border: 1px solid #2a2a35 !important;
+  color: var(--w-text) !important;
+  border-radius: 12px !important;
+  outline: none !important;
+}
+
+#nc-root input:focus,
+#nc-root textarea:focus,
+#nc-root select:focus{
+  border-color: rgba(42,191,191,.75) !important;
+  box-shadow: 0 0 0 3px rgba(42,191,191,.18) !important;
+}
+
+/* Botones */
+#nc-root button{
+  border-radius: 12px !important;
+}
+
+/* Botón primario (Publish/Guardar) — lo resaltamos */
+#nc-root button[class*="Primary"],
+#nc-root button[class*="primary"]{
+  background: var(--w-accent) !important;
+  color: #071012 !important;
+  border: none !important;
+}
+
+/* Links / estados activos */
+#nc-root a,
+#nc-root [class*="active"]{
+  color: var(--w-accent) !important;
+}
+
+/* Quitar blancos fuertes que “rompen” el dark */
+#nc-root [style*="background: rgb(255, 255, 255)"],
+#nc-root [style*="background:#fff"],
+#nc-root [style*="background: #fff"]{
+  background: var(--w-panel) !important;
+}
   </style>
 
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
