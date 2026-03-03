@@ -29,6 +29,7 @@ collections:
                   - { label: "Incluye", name: "includes", widget: "string", required: false }
                   - { label: "Precio", name: "price", widget: "number" }
                   - { label: "Imagen", name: "image", widget: "image", required: false }
+                  - { label: "Disponible", name: "enabled", widget: "boolean", default: true, required: false }
           - label: "Entradas"
             name: "appetizers"
             widget: "object"
@@ -48,6 +49,7 @@ collections:
                       - { label: "Subtexto", name: "sub", widget: "string", required: false }
                       - { label: "Precio", name: "price", widget: "number" }
                       - { label: "Imagen", name: "image", widget: "image", required: false }
+                      - { label: "Disponible", name: "enabled", widget: "boolean", default: true, required: false }
           - label: "Platos fuertes"
             name: "mains"
             widget: "object"
@@ -63,6 +65,7 @@ collections:
                   - { label: "Guarnición (opcional)", name: "sides", widget: "string", required: false }
                   - { label: "Precio", name: "price", widget: "number" }
                   - { label: "Imagen", name: "image", widget: "image", required: false }
+                  - { label: "Disponible", name: "enabled", widget: "boolean", default: true, required: false }
           - label: "Bebidas"
             name: "drinks"
             widget: "object"
@@ -81,4 +84,5 @@ collections:
                       - { label: "Nombre", name: "name", widget: "string" }
                       - { label: "Precio (texto)", name: "price", widget: "string" }
                       - { label: "Imagen", name: "image", widget: "image", required: false }
+                      - { label: "Disponible", name: "enabled", widget: "boolean", default: true, required: false }
           
