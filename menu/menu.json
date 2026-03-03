@@ -131,7 +131,8 @@
       {
         "name": "Mangú de Plátano Maduro con Huevo Hervido",
         "includes": "+ 1 Jugo Natural",
-        "price": 285
+        "price": 285,
+        "enabled": true
       },
       {
         "name": "Frito con Salami",
