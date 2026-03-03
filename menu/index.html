@@ -290,6 +290,9 @@ document.addEventListener('keydown', (e) => {
 
   function esc(s){ return (s ?? '').toString().replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
   function money(n){ return `RD$${Number(n).toLocaleString('en-US')}`; }
+  function isAvailable(v){
+  return !(v === false || v === "false" || v === 0 || v === "0");
+  }
 
   async function load(){
     const res = await fetch('/menu/menu.json', { cache: 'no-store' });
@@ -318,6 +321,7 @@ document.addEventListener('keydown', (e) => {
     const bg = document.getElementById('breakfastGrid');
     bg.innerHTML = '';
     (data.breakfast?.items || []).forEach(it => {
+      if (!isAvailable(it.enabled)) return;
       const card = document.createElement('div');
       card.className = 'breakfast-card';
       card.innerHTML = `
@@ -343,6 +347,7 @@ document.addEventListener('keydown', (e) => {
       block.innerHTML = `<p class="category-label">${esc(cat.label)}</p><div class="menu-items"></div>`;
       const items = block.querySelector('.menu-items');
       (cat.items || []).forEach(it => {
+        if (!isAvailable(it.enabled)) return;
         const row = document.createElement('div');
         row.className = 'menu-item';
         row.innerHTML = `<div><span class="item-name">${esc(it.name)}</span>${it.sub ? `<span class="item-sub">${esc(it.sub)}</span>` : ''}</div>
@@ -363,6 +368,7 @@ document.addEventListener('keydown', (e) => {
     const mg = document.getElementById('mainsGrid');
     mg.innerHTML = '';
     (data.mains?.cards || []).forEach(c => {
+      if (!isAvailable(c.enabled)) return;
       const sides = c.sides || data.mains?.sides_default || '';
       const card = document.createElement('div');
       card.className = 'main-card';
@@ -391,6 +397,7 @@ dg.innerHTML = '';
   div.innerHTML = `<p class="drinks-col-title">${esc(col.title)}</p>`;
 
   (col.items || []).forEach(it => {
+    if (!isAvailable(it.enabled)) return;
     const row = document.createElement('div');
     row.className = 'drink-item';
     row.innerHTML = `
